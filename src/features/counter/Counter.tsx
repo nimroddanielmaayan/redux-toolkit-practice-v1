@@ -1,5 +1,4 @@
-import type { RootState } from "../../app/store"
-import { decrement, increment, incrementByAmount } from "./counterSlice"
+import { decrement, increment, incrementByAmount, reset } from "./counterSlice"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 
 function Counter() {
@@ -20,6 +19,8 @@ function Counter() {
         <button onClick={() => dispatch(incrementByAmount(-5))}>
           Decrement by 5
         </button>
+        <br />
+        <button onClick={() => dispatch(reset())}>Reset</button>
       </div>
     </div>
   )
